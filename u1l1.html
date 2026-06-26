@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Science - Unit 1 | Lecture 1</title>
+
+<style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fa;
+    margin:0;
+    padding:20px;
+    line-height:1.8;
+    color:#333;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    box-shadow:0px 0px 15px rgba(0,0,0,.15);
+}
+
+h1{
+    color:#0B5394;
+    text-align:center;
+    border-bottom:4px solid #0B5394;
+    padding-bottom:10px;
+}
+
+h2{
+    color:#0B5394;
+    margin-top:35px;
+    border-left:6px solid #0B5394;
+    padding-left:12px;
+}
+
+h3{
+    color:#006699;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table,th,td{
+    border:1px solid #666;
+}
+
+th{
+    background:#0B5394;
+    color:white;
+    padding:10px;
+}
+
+td{
+    padding:10px;
+}
+
+.note{
+    background:#FFF8DC;
+    border-left:6px solid orange;
+    padding:15px;
+    margin:20px 0;
+}
+
+.definition{
+    background:#EAF4FF;
+    border-left:6px solid #2196F3;
+    padding:15px;
+    margin:20px 0;
+}
+
+.example{
+    background:#E8F5E9;
+    border-left:6px solid green;
+    padding:15px;
+    margin:20px 0;
+}
+
+.objective{
+    background:#F4F4F4;
+    border-left:6px solid purple;
+    padding:15px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:40px;
+    color:#666;
+    font-size:14px;
+}
+ul li{
+    margin-bottom:8px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Data Science<br>Unit – I : Introduction to Data Science<br>Lecture – 1</h1>
+
+<h3 align="center">
+Prepared By<br>
+<b>Dr. Nitin Mishra</b><br>
+Professor, Department of Computer Science & Engineering
+</h3>
+
+<hr>
+
+<h2>Learning Objectives</h2>
+
+<div class="objective">
+
+After completing this lecture, students will be able to:
+
+<ul>
+<li>Understand the meaning of Data Science.</li>
+<li>Explain why Data Science is important.</li>
+<li>Differentiate between Data, Information, Knowledge, and Wisdom.</li>
+<li>Identify the components of Data Science.</li>
+<li>Recognize real-world applications of Data Science.</li>
+</ul>
+
+</div>
+
+<h2>1. Introduction to Data Science</h2>
+
+<div class="definition">
+
+<b>Definition:</b>
+
+<p>
+Data Science is an interdisciplinary field that combines statistics,
+mathematics, programming, machine learning, and domain knowledge
+to collect, process, analyze, and interpret data in order to extract
+meaningful insights and support intelligent decision-making.
+</p>
+
+</div>
+
+<p>
+
+In today's digital world, enormous amounts of data are generated every second through smartphones,
+social media, online shopping, healthcare systems, banks, educational institutions,
+and IoT devices. Data Science helps organizations convert this raw data into
+valuable knowledge.
+
+</p>
+
+<h2>2. Why Do We Need Data Science?</h2>
+
+<ul>
+
+<li>To make better business decisions.</li>
+
+<li>To predict future trends.</li>
+
+<li>To improve customer satisfaction.</li>
+
+<li>To automate repetitive tasks.</li>
+
+<li>To detect fraud and cyber attacks.</li>
+
+<li>To improve healthcare diagnosis.</li>
+
+<li>To recommend products and services.</li>
+
+<li>To analyze large volumes of data efficiently.</li>
+
+</ul>
+
+<div class="example">
+
+<b>Example:</b>
+
+<p>
+
+Amazon recommends products based on previous purchases.
+
+Netflix recommends movies according to viewing history.
+
+Google Maps suggests the fastest route using traffic data.
+
+Banks detect fraudulent transactions using Data Science techniques.
+
+</p>
+
+</div>
+
+<h2>3. What is Data?</h2>
+
+<div class="definition">
+
+<b>Data</b> refers to raw facts, numbers, observations, symbols, or measurements that
+have not yet been processed.
+
+</div>
+
+<table>
+
+<tr>
+<th>Example</th>
+<th>Data</th>
+</tr>
+
+<tr>
+<td>Student Marks</td>
+<td>75, 82, 90, 68</td>
+</tr>
+
+<tr>
+<td>Temperature</td>
+<td>32°C, 35°C</td>
+</tr>
+
+<tr>
+<td>Bank Balance</td>
+<td>₹50,000</td>
+</tr>
+
+</table>
+
+<h2>4. What is Information?</h2>
+
+<div class="definition">
+
+Information is processed and organized data that provides meaning and context.
+
+</div>
+
+<p>
+
+Example:
+
+"Student Rahul scored 90 marks and secured First Division."
+
+Here, raw marks have been processed to provide useful information.
+
+</p>
+
+<h2>5. Data vs Information</h2>
+
+<table>
+
+<tr>
+<th>Data</th>
+<th>Information</th>
+</tr>
+
+<tr>
+<td>Raw facts</td>
+<td>Processed facts</td>
+</tr>
+
+<tr>
+<td>No context</td>
+<td>Meaningful</td>
+</tr>
+
+<tr>
+<td>Input</td>
+<td>Output</td>
+</tr>
+
+<tr>
+<td>Unorganized</td>
+<td>Organized</td>
+</tr>
+
+</table>
+
+<h2>6. Knowledge and Wisdom</h2>
+
+<table>
+
+<tr>
+<th>Level</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>Data</td>
+<td>Raw facts</td>
+</tr>
+
+<tr>
+<td>Information</td>
+<td>Meaningful data</td>
+</tr>
+
+<tr>
+<td>Knowledge</td>
+<td>Experience gained from information</td>
+</tr>
+
+<tr>
+<td>Wisdom</td>
+<td>Ability to make correct decisions</td>
+</tr>
+
+</table>
+
+<div class="note">
+
+<b>Remember:</b>
+
+Data → Information → Knowledge → Wisdom
+
+This is known as the <b>DIKW Pyramid</b>.
+
+</div>
+
+<h2>7. Components of Data Science</h2>
+
+<table>
+
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>Mathematics</td>
+<td>Problem solving and modelling</td>
+</tr>
+
+<tr>
+<td>Statistics</td>
+<td>Data analysis and inference</td>
+</tr>
+
+<tr>
+<td>Programming</td>
+<td>Data processing using Python/R</td>
+</tr>
+
+<tr>
+<td>Machine Learning</td>
+<td>Prediction and automation</td>
+</tr>
+
+<tr>
+<td>Domain Knowledge</td>
+<td>Business understanding</td>
+</tr>
+
+<tr>
+<td>Visualization</td>
+<td>Presenting insights effectively</td>
+</tr>
+
+</table>
+
+<h2>8. Data Science Workflow</h2>
+
+<ol>
+
+<li>Collect Data</li>
+
+<li>Clean Data</li>
+
+<li>Process Data</li>
+
+<li>Analyze Data</li>
+
+<li>Build Model</li>
+
+<li>Visualize Results</li>
+
+<li>Take Business Decisions</li>
+
+</ol>
+
+<h2>9. Applications of Data Science</h2>
+
+<table>
+
+<tr>
+<th>Sector</th>
+<th>Applications</th>
+</tr>
+
+<tr>
+<td>Healthcare</td>
+<td>Disease prediction, medical diagnosis</td>
+</tr>
+
+<tr>
+<td>Finance</td>
+<td>Fraud detection, stock prediction</td>
+</tr>
+
+<tr>
+<td>Education</td>
+<td>Student performance analysis</td>
+</tr>
+
+<tr>
+<td>E-Commerce</td>
+<td>Recommendation systems</td>
+</tr>
+
+<tr>
+<td>Agriculture</td>
+<td>Crop prediction</td>
+</tr>
+
+<tr>
+<td>Cyber Security</td>
+<td>Intrusion detection</td>
+</tr>
+
+<tr>
+<td>Transportation</td>
+<td>Traffic prediction</td>
+</tr>
+
+<tr>
+<td>Entertainment</td>
+<td>Movie recommendation</td>
+</tr>
+
+</table>
+
+<h2>10. Characteristics of Data Science</h2>
+
+<ul>
+
+<li>Data-driven</li>
+
+<li>Interdisciplinary field</li>
+
+<li>Predictive and descriptive analysis</li>
+
+<li>Decision support system</li>
+
+<li>Uses Artificial Intelligence and Machine Learning</li>
+
+<li>Handles structured and unstructured data</li>
+
+</ul>
+
+<h2>11. Advantages of Data Science</h2>
+
+<ul>
+
+<li>Improves decision making</li>
+
+<li>Enhances productivity</li>
+
+<li>Reduces operational cost</li>
+
+<li>Predicts customer behavior</li>
+
+<li>Automates business processes</li>
+
+<li>Supports innovation</li>
+
+</ul>
+
+<h2>12. Limitations</h2>
+
+<ul>
+
+<li>Requires quality data.</li>
+
+<li>Privacy and security concerns.</li>
+
+<li>Requires skilled professionals.</li>
+
+<li>High computational cost.</li>
+
+<li>Data bias may affect predictions.</li>
+
+</ul>
+
+<h2>13. Summary</h2>
+
+<ul>
+
+<li>Data Science converts raw data into meaningful insights.</li>
+
+<li>It integrates statistics, programming, machine learning, and domain knowledge.</li>
+
+<li>Organizations use Data Science to improve decision making.</li>
+
+<li>Applications exist in healthcare, finance, education, agriculture, and many other domains.</li>
+
+</ul>
+
+<h2>Interview Questions</h2>
+
+<ol>
+
+<li>What is Data Science?</li>
+
+<li>Differentiate between Data and Information.</li>
+
+<li>Explain the DIKW Pyramid.</li>
+
+<li>What are the major components of Data Science?</li>
+
+<li>Why is Data Science important in modern organizations?</li>
+
+<li>Name five real-world applications of Data Science.</li>
+
+<li>What skills are required to become a Data Scientist?</li>
+
+</ol>
+
+<h2>Multiple Choice Questions</h2>
+
+<ol>
+
+<li>Data Science is primarily used for:<br>
+a) Gaming<br>
+b) Data Analysis ✔<br>
+c) Word Processing<br>
+d) Painting
+</li>
+
+<br>
+
+<li>Which language is most popular for Data Science?<br>
+a) Python ✔<br>
+b) HTML<br>
+c) CSS<br>
+d) PHP
+</li>
+
+<br>
+
+<li>Raw facts are called:<br>
+a) Information<br>
+b) Knowledge<br>
+c) Data ✔<br>
+d) Wisdom
+</li>
+
+<br>
+
+<li>Which component is NOT part of Data Science?<br>
+a) Statistics<br>
+b) Programming<br>
+c) Machine Learning<br>
+d) Printer ✔
+</li>
+
+<br>
+
+<li>Which company uses recommendation systems?<br>
+a) Netflix ✔<br>
+b) Calculator<br>
+c) Paint<br>
+d) Notepad
+</li>
+
+</ol>
+
+<h2>Assignment</h2>
+
+<ol>
+
+<li>Define Data Science with suitable examples.</li>
+
+<li>Explain Data, Information, Knowledge, and Wisdom.</li>
+
+<li>Write the importance of Data Science in today's world.</li>
+
+<li>Discuss five real-world applications of Data Science.</li>
+
+<li>Prepare a one-page report on how Data Science is used in healthcare.</li>
+
+</ol>
+
+<div class="footer">
+
+<hr>
+
+<b>End of Lecture – 1</b><br>
+
+Next Lecture: <b>Digital Universe</b>
+
+</div>
+
+</div>
+
+</body>
+</html>
