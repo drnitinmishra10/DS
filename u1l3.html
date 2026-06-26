@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Science - Unit 1 | Lecture 3: Sources of Data</title>
+
+<style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:20px;
+    line-height:1.8;
+    color:#333;
+}
+.container{
+    max-width:1100px;
+    margin:auto;
+    background:#fff;
+    padding:40px;
+    box-shadow:0 0 12px rgba(0,0,0,0.15);
+}
+h1{
+    text-align:center;
+    color:#0B5394;
+    border-bottom:4px solid #0B5394;
+    padding-bottom:10px;
+}
+h2{
+    color:#0B5394;
+    border-left:6px solid #0B5394;
+    padding-left:12px;
+    margin-top:35px;
+}
+h3{
+    color:#006699;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+table,th,td{
+    border:1px solid #666;
+}
+th{
+    background:#0B5394;
+    color:white;
+    padding:10px;
+}
+td{
+    padding:10px;
+}
+.definition{
+    background:#EAF4FF;
+    border-left:6px solid #2196F3;
+    padding:15px;
+    margin:20px 0;
+}
+.note{
+    background:#FFF8DC;
+    border-left:6px solid orange;
+    padding:15px;
+    margin:20px 0;
+}
+.example{
+    background:#E8F5E9;
+    border-left:6px solid green;
+    padding:15px;
+    margin:20px 0;
+}
+.objective{
+    background:#F3F3F3;
+    border-left:6px solid purple;
+    padding:15px;
+}
+.diagram{
+    background:#F8F8F8;
+    border:2px dashed #999;
+    padding:20px;
+    text-align:center;
+    font-family:Consolas, monospace;
+    margin:20px 0;
+}
+.footer{
+    text-align:center;
+    margin-top:40px;
+    color:#666;
+}
+ul li{
+    margin-bottom:8px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+Data Science<br>
+Unit – I : Introduction to Data Science<br>
+Lecture – 3 : Sources of Data
+</h1>
+
+<h3 align="center">
+Prepared By<br>
+<b>Dr. Nitin Mishra</b><br>
+Professor, Department of Computer Science & Engineering
+</h3>
+
+<hr>
+
+<h2>Learning Objectives</h2>
+
+<div class="objective">
+
+After completing this lecture, students will be able to:
+
+<ul>
+<li>Understand the meaning of data sources.</li>
+<li>Identify various sources of data used in Data Science.</li>
+<li>Differentiate between primary and secondary data.</li>
+<li>Classify data based on its origin and structure.</li>
+<li>Select suitable data sources for Data Science projects.</li>
+</ul>
+
+</div>
+
+<h2>1. Introduction</h2>
+
+<p>
+
+Data is the foundation of every Data Science project. Without data,
+it is impossible to perform analysis, build predictive models, or make
+data-driven decisions.
+
+A <b>Data Source</b> is any location, device, system, application,
+or repository from which data can be collected for analysis.
+
+</p>
+
+<div class="definition">
+
+<b>Definition</b>
+
+A <b>Source of Data</b> is the origin from which raw facts,
+observations, or records are collected for processing and analysis.
+
+</div>
+
+<h2>2. Why are Data Sources Important?</h2>
+
+<ul>
+
+<li>Provide raw material for analysis.</li>
+
+<li>Help in building Machine Learning models.</li>
+
+<li>Support business decision-making.</li>
+
+<li>Improve prediction accuracy.</li>
+
+<li>Enable scientific research.</li>
+
+<li>Assist in solving real-world problems.</li>
+
+</ul>
+
+<div class="note">
+
+<b>Remember:</b>
+
+<b>"Better Data → Better Analysis → Better Decisions"</b>
+
+</div>
+
+<h2>3. Classification of Data Sources</h2>
+
+<div class="diagram">
+
+DATA SOURCES
+
+↓
+
+Primary Data
+
+↓
+
+Secondary Data
+
+↓
+
+Internal Data
+
+↓
+
+External Data
+
+↓
+
+Open Data
+
+↓
+
+Real-Time Data
+
+</div>
+
+<h2>4. Primary Data</h2>
+
+<div class="definition">
+
+Primary Data is collected directly from the original source
+for a specific purpose.
+
+</div>
+
+<h3>Methods of Collecting Primary Data</h3>
+
+<ul>
+
+<li>Questionnaires</li>
+
+<li>Online Surveys</li>
+
+<li>Interviews</li>
+
+<li>Observations</li>
+
+<li>Experiments</li>
+
+<li>Sensor Devices</li>
+
+</ul>
+
+<div class="example">
+
+<b>Example</b>
+
+A university conducts a survey among students to know their
+placement preferences.
+
+The collected responses are Primary Data.
+
+</div>
+
+<h2>5. Secondary Data</h2>
+
+<div class="definition">
+
+Secondary Data is data that has already been collected,
+processed, and published by another organization or researcher.
+
+</div>
+
+<table>
+
+<tr>
+<th>Source</th>
+<th>Example</th>
+</tr>
+
+<tr>
+<td>Government Reports</td>
+<td>Population Census</td>
+</tr>
+
+<tr>
+<td>Research Papers</td>
+<td>IEEE, Springer Journals</td>
+</tr>
+
+<tr>
+<td>Books</td>
+<td>Statistical Yearbooks</td>
+</tr>
+
+<tr>
+<td>Company Reports</td>
+<td>Annual Reports</td>
+</tr>
+
+<tr>
+<td>Websites</td>
+<td>Public Data Portals</td>
+</tr>
+
+</table>
+
+<h2>6. Internal and External Data Sources</h2>
+
+<table>
+
+<tr>
+<th>Internal Data</th>
+<th>External Data</th>
+</tr>
+
+<tr>
+<td>Sales Database</td>
+<td>Government Reports</td>
+</tr>
+
+<tr>
+<td>Employee Records</td>
+<td>Weather Data</td>
+</tr>
+
+<tr>
+<td>Customer Transactions</td>
+<td>Social Media</td>
+</tr>
+
+<tr>
+<td>Financial Records</td>
+<td>Stock Market Data</td>
+</tr>
+
+<tr>
+<td>Inventory</td>
+<td>Research Publications</td>
+</tr>
+
+</table>
+
+<h2>7. Structured, Semi-Structured and Unstructured Data Sources</h2>
+
+<table>
+
+<tr>
+<th>Type</th>
+<th>Examples</th>
+</tr>
+
+<tr>
+<td>Structured</td>
+<td>SQL Databases, Excel Sheets</td>
+</tr>
+
+<tr>
+<td>Semi-Structured</td>
+<td>XML, JSON, HTML</td>
+</tr>
+
+<tr>
+<td>Unstructured</td>
+<td>Videos, Images, Emails, Audio Files</td>
+</tr>
+
+</table>
+
+<h2>8. Modern Sources of Data</h2>
+
+<table>
+
+<tr>
+<th>Source</th>
+<th>Examples</th>
+</tr>
+
+<tr>
+<td>Social Media</td>
+<td>Facebook, Instagram, X</td>
+</tr>
+
+<tr>
+<td>IoT Devices</td>
+<td>Smart Watches, Smart Homes</td>
+</tr>
+
+<tr>
+<td>E-Commerce</td>
+<td>Amazon, Flipkart</td>
+</tr>
+
+<tr>
+<td>Healthcare</td>
+<td>Electronic Health Records</td>
+</tr>
+
+<tr>
+<td>Banking</td>
+<td>UPI Transactions, ATM Logs</td>
+</tr>
+
+<tr>
+<td>Education</td>
+<td>Learning Management Systems</td>
+</tr>
+
+<tr>
+<td>Transportation</td>
+<td>GPS and Traffic Sensors</td>
+</tr>
+
+</table>
+
+<h2>9. Open Data Sources</h2>
+
+<p>
+
+Open Data is publicly available data that anyone can use,
+modify, and share.
+
+</p>
+
+<table>
+
+<tr>
+<th>Platform</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>data.gov.in</td>
+<td>Indian Government Open Data</td>
+</tr>
+
+<tr>
+<td>data.gov</td>
+<td>US Government Open Data</td>
+</tr>
+
+<tr>
+<td>Kaggle</td>
+<td>Machine Learning Datasets</td>
+</tr>
+
+<tr>
+<td>UCI Repository</td>
+<td>Academic Datasets</td>
+</tr>
+
+<tr>
+<td>World Bank</td>
+<td>Economic Statistics</td>
+</tr>
+
+</table>
+
+<h2>10. Real-Time Data Sources</h2>
+
+<ul>
+
+<li>Stock Market</li>
+
+<li>Weather Stations</li>
+
+<li>Traffic Sensors</li>
+
+<li>Social Media Feeds</li>
+
+<li>Smart Devices</li>
+
+<li>GPS Navigation Systems</li>
+
+</ul>
+
+<div class="example">
+
+<b>Example</b>
+
+Google Maps continuously collects GPS data from millions of smartphones
+to estimate traffic conditions in real time.
+
+</div>
+
+<h2>11. Characteristics of Good Data Sources</h2>
+
+<ul>
+
+<li>Accurate</li>
+
+<li>Reliable</li>
+
+<li>Relevant</li>
+
+<li>Timely</li>
+
+<li>Complete</li>
+
+<li>Consistent</li>
+
+<li>Secure</li>
+
+</ul>
+
+<h2>12. Challenges in Data Collection</h2>
+
+<table>
+
+<tr>
+<th>Challenge</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>Missing Data</td>
+<td>Incomplete records</td>
+</tr>
+
+<tr>
+<td>Duplicate Data</td>
+<td>Repeated entries</td>
+</tr>
+
+<tr>
+<td>Data Bias</td>
+<td>Unbalanced information</td>
+</tr>
+
+<tr>
+<td>Privacy Issues</td>
+<td>Personal information leakage</td>
+</tr>
+
+<tr>
+<td>Data Quality</td>
+<td>Incorrect or inconsistent data</td>
+</tr>
+
+<tr>
+<td>Large Volume</td>
+<td>Difficult to store and process</td>
+</tr>
+
+</table>
+
+<h2>13. Applications of Different Data Sources</h2>
+
+<table>
+
+<tr>
+<th>Industry</th>
+<th>Data Source</th>
+</tr>
+
+<tr>
+<td>Healthcare</td>
+<td>Patient Records, Medical Images</td>
+</tr>
+
+<tr>
+<td>Finance</td>
+<td>Bank Transactions</td>
+</tr>
+
+<tr>
+<td>Agriculture</td>
+<td>Satellite Images</td>
+</tr>
+
+<tr>
+<td>Retail</td>
+<td>Customer Purchase History</td>
+</tr>
+
+<tr>
+<td>Education</td>
+<td>Student Performance Data</td>
+</tr>
+
+<tr>
+<td>Cyber Security</td>
+<td>Network Logs</td>
+</tr>
+
+</table>
+
+<h2>14. Summary</h2>
+
+<ul>
+
+<li>Data sources provide the raw information required for analysis.</li>
+
+<li>Primary data is collected directly, while secondary data is obtained from existing sources.</li>
+
+<li>Data may be internal, external, structured, semi-structured, or unstructured.</li>
+
+<li>Modern Data Science relies heavily on IoT, social media, cloud services, and open datasets.</li>
+
+<li>The quality of a Data Science project depends largely on the quality of the data source.</li>
+
+</ul>
+
+<h2>Interview Questions</h2>
+
+<ol>
+
+<li>What is a data source?</li>
+
+<li>Differentiate between primary and secondary data.</li>
+
+<li>Explain internal and external data sources.</li>
+
+<li>What are structured, semi-structured, and unstructured data sources?</li>
+
+<li>Name five modern sources of data.</li>
+
+<li>What is Open Data? Give examples.</li>
+
+<li>Why is data quality important in Data Science?</li>
+
+</ol>
+
+<h2>Multiple Choice Questions</h2>
+
+<ol>
+
+<li>Primary data is collected:<br>
+a) Directly from the original source ✔<br>
+b) From books only<br>
+c) From websites only<br>
+d) From newspapers only
+</li>
+
+<br>
+
+<li>Which of the following is an example of secondary data?<br>
+a) Personal interview<br>
+b) Survey conducted by you<br>
+c) Government Census Report ✔<br>
+d) Classroom observation
+</li>
+
+<br>
+
+<li>Which type of data is stored in relational databases?<br>
+a) Unstructured<br>
+b) Structured ✔<br>
+c) Semi-Structured<br>
+d) Multimedia
+</li>
+
+<br>
+
+<li>Which platform is widely used for Machine Learning datasets?<br>
+a) Kaggle ✔<br>
+b) Paint<br>
+c) Notepad<br>
+d) VLC Player
+</li>
+
+<br>
+
+<li>GPS data is an example of:<br>
+a) Real-Time Data ✔<br>
+b) Historical Data<br>
+c) Manual Data<br>
+d) Printed Data
+</li>
+
+</ol>
+
+<h2>Assignment</h2>
+
+<ol>
+
+<li>Define data sources with suitable examples.</li>
+
+<li>Differentiate between primary and secondary data.</li>
+
+<li>Explain internal and external data sources.</li>
+
+<li>Discuss modern sources of data used in Data Science.</li>
+
+<li>Write a short note on the importance of data quality in Data Science projects.</li>
+
+</ol>
+
+<div class="footer">
+
+<hr>
+
+<b>End of Lecture – 3</b><br>
+
+<b>Next Lecture: Information Commons</b>
+
+</div>
+
+</div>
+
+</body>
+</html>
