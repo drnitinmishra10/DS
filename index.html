@@ -266,25 +266,33 @@
 
                 // Resolve references and fetch underlying file contents concurrently to pull title attributes
                 const processPromises = htmlFiles.map(async (file) => {
-                    const rawUrl = `https://raw.githubusercontent.com/drnitinmishra10/OS/main/${file.path}`;
-                    let title = file.path.split('/').pop(); // Initial fallback to file name
 
-                    try {
-                        const fileRes = await fetch(rawUrl);
-                        if (fileRes.ok) {
-                            const text = await fileRes.text();
-                            title = extractTitle(text, title);
-                        }
-                    } catch (err) {
-                        console.warn(`Meta-title extraction skipped for ${file.path}:`, err);
-                    }
+    const rawUrl = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main/${file.path}`;
 
-                    return {
-                        path: file.path,
-                        title: title,
-                        url: `https://drnitinmishra10.github.io/DS/${file.path}`
-                    };
-                });
+    let title = file.path
+        .split("/")
+        .pop()
+        .replace(".html", "");
+
+    try {
+        const response = await fetch(rawUrl);
+
+        if (response.ok) {
+            const html = await response.text();
+
+            // Extract <title> from HTML
+            title = extractTitle(html, title);
+        }
+    } catch (error) {
+        console.error(`Error reading ${file.path}`, error);
+    }
+
+    return {
+        title,
+        path: file.path,
+        url: `https://${REPO_OWNER}.github.io/${REPO_NAME}/${file.path}`
+    };
+});
 
                 allFiles = await Promise.all(processPromises);
                 renderGrid(allFiles);
