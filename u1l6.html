@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Science - Unit 1 | Lecture 6 : OSEMN Framework</title>
+
+<style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:20px;
+    line-height:1.8;
+    color:#333;
+}
+.container{
+    max-width:1100px;
+    margin:auto;
+    background:#ffffff;
+    padding:40px;
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
+}
+h1{
+    color:#0B5394;
+    text-align:center;
+    border-bottom:4px solid #0B5394;
+    padding-bottom:10px;
+}
+h2{
+    color:#0B5394;
+    border-left:6px solid #0B5394;
+    padding-left:12px;
+    margin-top:35px;
+}
+h3{
+    color:#006699;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+table,th,td{
+    border:1px solid #666;
+}
+th{
+    background:#0B5394;
+    color:white;
+    padding:10px;
+}
+td{
+    padding:10px;
+}
+.definition{
+    background:#EAF4FF;
+    border-left:6px solid #2196F3;
+    padding:15px;
+    margin:20px 0;
+}
+.objective{
+    background:#F4F4F4;
+    border-left:6px solid purple;
+    padding:15px;
+}
+.note{
+    background:#FFF8DC;
+    border-left:6px solid orange;
+    padding:15px;
+    margin:20px 0;
+}
+.example{
+    background:#E8F5E9;
+    border-left:6px solid green;
+    padding:15px;
+    margin:20px 0;
+}
+.diagram{
+    background:#F8F8F8;
+    border:2px dashed #888;
+    padding:20px;
+    text-align:center;
+    font-family:Consolas, monospace;
+    margin:20px 0;
+}
+.footer{
+    text-align:center;
+    margin-top:40px;
+    color:#666;
+}
+ul li{
+    margin-bottom:8px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+Data Science<br>
+Unit – I : Introduction to Data Science<br>
+Lecture – 6 : OSEMN Framework
+</h1>
+
+<h3 align="center">
+Prepared By<br>
+<b>Dr. Nitin Mishra</b><br>
+Professor, Department of Computer Science & Engineering
+</h3>
+
+<hr>
+
+<h2>Learning Objectives</h2>
+
+<div class="objective">
+
+After completing this lecture, students will be able to:
+
+<ul>
+<li>Understand the concept of the OSEMN Framework.</li>
+<li>Explain each stage of the OSEMN process.</li>
+<li>Apply the framework to solve real-world Data Science problems.</li>
+<li>Understand how OSEMN differs from the traditional Data Science Life Cycle.</li>
+<li>Identify the importance of each phase in building successful data-driven solutions.</li>
+</ul>
+
+</div>
+
+<h2>1. Introduction</h2>
+
+<p>
+
+The <b>OSEMN Framework</b> is a simple and practical methodology used by Data Scientists
+to organize and execute data analysis projects. It was introduced by the renowned Data
+Scientist <b>Hilary Mason</b> to describe the major activities involved in solving
+real-world Data Science problems.
+
+Unlike traditional software development models, OSEMN focuses specifically on
+obtaining, preparing, analyzing, and interpreting data.
+
+</p>
+
+<div class="definition">
+
+<b>Definition</b>
+
+The <b>OSEMN Framework</b> is a five-step Data Science workflow consisting of:
+
+<ul>
+<li><b>O</b> – Obtain</li>
+<li><b>S</b> – Scrub</li>
+<li><b>E</b> – Explore</li>
+<li><b>M</b> – Model</li>
+<li><b>N</b> – iNterpret</li>
+</ul>
+
+</div>
+
+<h2>2. Why Use the OSEMN Framework?</h2>
+
+<ul>
+
+<li>Provides a clear workflow for Data Science projects.</li>
+<li>Improves data quality before modeling.</li>
+<li>Helps discover hidden patterns in data.</li>
+<li>Supports informed business decisions.</li>
+<li>Reduces errors during data analysis.</li>
+
+</ul>
+
+<div class="note">
+
+<b>Remember:</b>
+
+Most of a Data Scientist's time is spent obtaining, cleaning, and understanding data—not just building machine learning models.
+
+</div>
+
+<h2>3. OSEMN Workflow</h2>
+
+<div class="diagram">
+
+OBTAIN
+
+↓
+
+SCRUB
+
+↓
+
+EXPLORE
+
+↓
+
+MODEL
+
+↓
+
+INTERPRET
+
+</div>
+
+<h2>4. Phase 1 : Obtain</h2>
+
+<div class="definition">
+
+The first step involves collecting relevant data from different sources.
+
+</div>
+
+<h3>Data Sources</h3>
+
+<ul>
+
+<li>Databases</li>
+<li>CSV and Excel files</li>
+<li>Web APIs</li>
+<li>Cloud Storage</li>
+<li>IoT Devices</li>
+<li>Social Media</li>
+<li>Government Portals</li>
+
+</ul>
+
+<div class="example">
+
+<b>Example</b>
+
+A hospital collects patient records, laboratory reports,
+and medical images for disease prediction.
+
+</div>
+
+<h2>5. Phase 2 : Scrub</h2>
+
+<div class="definition">
+
+Scrubbing (Data Cleaning) is the process of improving data quality by removing errors,
+missing values, duplicates, and inconsistencies.
+
+</div>
+
+<h3>Data Cleaning Activities</h3>
+
+<ul>
+
+<li>Handle missing values.</li>
+<li>Remove duplicate records.</li>
+<li>Correct inconsistent data.</li>
+<li>Standardize formats.</li>
+<li>Detect outliers.</li>
+<li>Transform variables.</li>
+
+</ul>
+
+<table>
+
+<tr>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+
+<tr>
+<td>Missing Values</td>
+<td>Mean, Median, Mode, Deletion</td>
+</tr>
+
+<tr>
+<td>Duplicate Records</td>
+<td>Remove duplicates</td>
+</tr>
+
+<tr>
+<td>Incorrect Values</td>
+<td>Data Validation</td>
+</tr>
+
+<tr>
+<td>Outliers</td>
+<td>Statistical Methods</td>
+</tr>
+
+</table>
+
+<h2>6. Phase 3 : Explore</h2>
+
+<div class="definition">
+
+Exploration means understanding the dataset using statistical analysis
+and visualization techniques.
+
+</div>
+
+<h3>Common EDA Techniques</h3>
+
+<ul>
+
+<li>Summary Statistics</li>
+<li>Correlation Analysis</li>
+<li>Histograms</li>
+<li>Box Plots</li>
+<li>Scatter Plots</li>
+<li>Heat Maps</li>
+
+</ul>
+
+<div class="example">
+
+<b>Example</b>
+
+A retail company analyzes customer purchase history to identify buying patterns.
+
+</div>
+
+<h2>7. Phase 4 : Model</h2>
+
+<div class="definition">
+
+In this phase, Machine Learning or statistical models are developed to solve the problem.
+
+</div>
+
+<table>
+
+<tr>
+<th>Problem Type</th>
+<th>Suitable Algorithms</th>
+</tr>
+
+<tr>
+<td>Classification</td>
+<td>Decision Tree, Logistic Regression, Random Forest</td>
+</tr>
+
+<tr>
+<td>Regression</td>
+<td>Linear Regression</td>
+</tr>
+
+<tr>
+<td>Clustering</td>
+<td>K-Means</td>
+</tr>
+
+<tr>
+<td>Recommendation</td>
+<td>Collaborative Filtering</td>
+</tr>
+
+</table>
+
+<h2>8. Phase 5 : Interpret</h2>
+
+<div class="definition">
+
+Interpretation involves explaining the model results in a meaningful manner
+so that stakeholders can make informed decisions.
+
+</div>
+
+<h3>Interpretation Activities</h3>
+
+<ul>
+
+<li>Evaluate model performance.</li>
+<li>Create visual reports.</li>
+<li>Explain important features.</li>
+<li>Generate business insights.</li>
+<li>Recommend actions.</li>
+
+</ul>
+
+<div class="example">
+
+<b>Example</b>
+
+A bank's loan prediction model identifies income, credit score,
+and repayment history as the most influential factors for loan approval.
+
+</div>
+
+<h2>9. OSEMN Framework vs Data Science Project Life Cycle</h2>
+
+<table>
+
+<tr>
+<th>OSEMN Framework</th>
+<th>Project Life Cycle</th>
+</tr>
+
+<tr>
+<td>Focused on data analysis</td>
+<td>Focused on complete project execution</td>
+</tr>
+
+<tr>
+<td>Five stages</td>
+<td>Eight or more stages</td>
+</tr>
+
+<tr>
+<td>Simple and practical</td>
+<td>Detailed and comprehensive</td>
+</tr>
+
+<tr>
+<td>Suitable for analytical tasks</td>
+<td>Suitable for enterprise projects</td>
+</tr>
+
+</table>
+
+<h2>10. Real-World Case Study</h2>
+
+<div class="example">
+
+<b>Problem:</b> Predict Heart Disease
+
+<table>
+
+<tr>
+<th>OSEMN Stage</th>
+<th>Activity</th>
+</tr>
+
+<tr>
+<td>Obtain</td>
+<td>Collect hospital patient data</td>
+</tr>
+
+<tr>
+<td>Scrub</td>
+<td>Handle missing values and remove duplicates</td>
+</tr>
+
+<tr>
+<td>Explore</td>
+<td>Analyze age, cholesterol, blood pressure</td>
+</tr>
+
+<tr>
+<td>Model</td>
+<td>Train a Random Forest classifier</td>
+</tr>
+
+<tr>
+<td>Interpret</td>
+<td>Explain predictions and identify key risk factors</td>
+</tr>
+
+</table>
+
+</div>
+
+<h2>11. Advantages of the OSEMN Framework</h2>
+
+<ul>
+
+<li>Simple and easy to understand.</li>
+<li>Improves data quality.</li>
+<li>Encourages exploratory analysis.</li>
+<li>Supports better model development.</li>
+<li>Produces meaningful business insights.</li>
+
+</ul>
+
+<h2>12. Limitations</h2>
+
+<ul>
+
+<li>Does not explicitly include deployment.</li>
+<li>Monitoring and maintenance are not separate stages.</li>
+<li>Less suitable for large enterprise project management.</li>
+<li>Requires high-quality data for best results.</li>
+
+</ul>
+
+<h2>13. Best Practices</h2>
+
+<ul>
+
+<li>Clearly define the problem before collecting data.</li>
+<li>Use reliable data sources.</li>
+<li>Perform thorough data cleaning.</li>
+<li>Visualize data before modeling.</li>
+<li>Validate models using appropriate metrics.</li>
+<li>Communicate results clearly to stakeholders.</li>
+
+</ul>
+
+<h2>14. Summary</h2>
+
+<ul>
+
+<li>The OSEMN Framework provides a structured five-step workflow for Data Science.</li>
+<li>The stages are Obtain, Scrub, Explore, Model, and iNterpret.</li>
+<li>Each stage plays a critical role in transforming raw data into meaningful insights.</li>
+<li>The framework is widely used for practical Data Science and Machine Learning projects.</li>
+
+</ul>
+
+<h2>Interview Questions</h2>
+
+<ol>
+
+<li>What is the OSEMN Framework?</li>
+<li>Expand the acronym OSEMN.</li>
+<li>Explain each stage of the OSEMN Framework.</li>
+<li>Differentiate between Scrubbing and Exploring data.</li>
+<li>How is OSEMN different from the Data Science Project Life Cycle?</li>
+<li>Why is data cleaning important before model building?</li>
+<li>Explain the role of interpretation in decision-making.</li>
+
+</ol>
+
+<h2>Multiple Choice Questions (MCQs)</h2>
+
+<ol>
+
+<li>OSEMN was proposed by:<br>
+a) Andrew Ng<br>
+b) Hilary Mason ✔<br>
+c) Geoffrey Hinton<br>
+d) Ian Goodfellow
+</li>
+
+<br>
+
+<li>The letter <b>S</b> in OSEMN stands for:<br>
+a) Search<br>
+b) Scrub ✔<br>
+c) Store<br>
+d) Share
+</li>
+
+<br>
+
+<li>Which phase involves cleaning missing values and duplicate records?<br>
+a) Explore<br>
+b) Obtain<br>
+c) Scrub ✔<br>
+d) Interpret
+</li>
+
+<br>
+
+<li>Machine Learning algorithms are applied during which stage?<br>
+a) Obtain<br>
+b) Explore<br>
+c) Model ✔<br>
+d) Interpret
+</li>
+
+<br>
+
+<li>The final stage of the OSEMN Framework is:<br>
+a) Monitor<br>
+b) Deploy<br>
+c) Interpret ✔<br>
+d) Integrate
+</li>
+
+</ol>
+
+<h2>Assignment</h2>
+
+<ol>
+
+<li>Define the OSEMN Framework.</li>
+<li>Draw and explain all five stages of the OSEMN Framework.</li>
+<li>Differentiate between the OSEMN Framework and the Data Science Project Life Cycle.</li>
+<li>Explain the importance of data scrubbing in a Data Science project.</li>
+<li>Describe a real-world application of the OSEMN Framework with an example.</li>
+
+</ol>
+
+<div class="footer">
+
+<hr>
+
+<b>End of Lecture – 6</b><br> <b>End of Unit – I : Introduction to Data Science</b>
+
+</div>
+
+</div>
+
+</body>
+</html>
