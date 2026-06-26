@@ -229,15 +229,19 @@
 
         // Helper to cleanly extract HTML titles via temporary parsing
         function extractTitle(htmlText, fallbackName) {
-            try {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(htmlText, 'text/html');
-                const titleNode = doc.querySelector('title');
-                return (titleNode && titleNode.innerText.trim()) ? titleNode.innerText.trim() : fallbackName;
-            } catch (e) {
-                return fallbackName;
-            }
-        }
+    try {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlText, "text/html");
+
+        // Read the HTML <title> tag
+        const title = doc.title.trim();
+
+        return title.length ? title : fallbackName;
+    } catch (e) {
+        console.error("Unable to extract title:", e);
+        return fallbackName;
+    }
+}
 
         // Fetch repository tree and process files asynchronously
         async function loadRepositoryIndex() {
