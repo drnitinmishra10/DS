@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Science - Unit 1 | Lecture 5 : Data Science Project Life Cycle</title>
+
+<style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:20px;
+    line-height:1.8;
+    color:#333;
+}
+.container{
+    max-width:1100px;
+    margin:auto;
+    background:#ffffff;
+    padding:40px;
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
+}
+h1{
+    color:#0B5394;
+    text-align:center;
+    border-bottom:4px solid #0B5394;
+    padding-bottom:10px;
+}
+h2{
+    color:#0B5394;
+    border-left:6px solid #0B5394;
+    padding-left:12px;
+    margin-top:35px;
+}
+h3{
+    color:#006699;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+table,th,td{
+    border:1px solid #666;
+}
+th{
+    background:#0B5394;
+    color:white;
+    padding:10px;
+}
+td{
+    padding:10px;
+}
+.definition{
+    background:#EAF4FF;
+    border-left:6px solid #2196F3;
+    padding:15px;
+    margin:20px 0;
+}
+.objective{
+    background:#F4F4F4;
+    border-left:6px solid purple;
+    padding:15px;
+}
+.note{
+    background:#FFF8DC;
+    border-left:6px solid orange;
+    padding:15px;
+    margin:20px 0;
+}
+.example{
+    background:#E8F5E9;
+    border-left:6px solid green;
+    padding:15px;
+    margin:20px 0;
+}
+.diagram{
+    background:#F8F8F8;
+    border:2px dashed #888;
+    padding:20px;
+    font-family:Consolas, monospace;
+    text-align:center;
+    margin:20px 0;
+}
+.footer{
+    text-align:center;
+    color:#666;
+    margin-top:40px;
+}
+ul li{
+    margin-bottom:8px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+Data Science<br>
+Unit – I : Introduction to Data Science<br>
+Lecture – 5 : Data Science Project Life Cycle
+</h1>
+
+<h3 align="center">
+Prepared By<br>
+<b>Dr. Nitin Mishra</b><br>
+Professor, Department of Computer Science & Engineering
+</h3>
+
+<hr>
+
+<h2>Learning Objectives</h2>
+
+<div class="objective">
+
+After completing this lecture, students will be able to:
+
+<ul>
+<li>Understand the concept of the Data Science Project Life Cycle.</li>
+<li>Identify the different phases involved in a Data Science project.</li>
+<li>Understand the activities performed in each phase.</li>
+<li>Apply the life cycle to solve real-world business problems.</li>
+<li>Recognize the importance of iteration and continuous improvement.</li>
+</ul>
+
+</div>
+
+<h2>1. Introduction</h2>
+
+<p>
+
+A Data Science project is not limited to developing a Machine Learning model.
+It involves understanding the business problem, collecting data, preparing data,
+building models, evaluating results, deploying solutions, and continuously improving
+the system.
+
+To organize these activities, Data Scientists follow a systematic process called the <b>Data Science Project Life Cycle</b>.
+
+</p>
+
+<div class="definition">
+
+<b>Definition</b>
+
+The <b>Data Science Project Life Cycle</b> is a structured sequence of steps followed
+to solve a real-world problem using data, statistical methods, and machine learning
+techniques.
+
+</div>
+
+<h2>2. Why is the Project Life Cycle Important?</h2>
+
+<ul>
+
+<li>Provides a structured approach to problem-solving.</li>
+
+<li>Improves project management.</li>
+
+<li>Ensures better quality of analysis.</li>
+
+<li>Reduces project risks.</li>
+
+<li>Improves collaboration among team members.</li>
+
+<li>Produces reliable and reproducible results.</li>
+
+</ul>
+
+<div class="note">
+
+<b>Remember</b>
+
+A successful Data Science project spends more time on understanding the problem
+and preparing data than on building Machine Learning models.
+
+</div>
+
+<h2>3. Phases of Data Science Project Life Cycle</h2>
+
+<div class="diagram">
+
+Business Understanding
+
+↓
+
+Data Collection
+
+↓
+
+Data Preparation
+
+↓
+
+Exploratory Data Analysis (EDA)
+
+↓
+
+Model Building
+
+↓
+
+Model Evaluation
+
+↓
+
+Deployment
+
+↓
+
+Monitoring & Improvement
+
+</div>
+
+<h2>4. Phase 1 : Business Understanding</h2>
+
+<div class="definition">
+
+The first phase focuses on identifying the business problem and defining project objectives.
+
+</div>
+
+<h3>Activities</h3>
+
+<ul>
+
+<li>Understand customer requirements.</li>
+
+<li>Identify project goals.</li>
+
+<li>Define success criteria.</li>
+
+<li>Estimate project feasibility.</li>
+
+</ul>
+
+<div class="example">
+
+<b>Example</b>
+
+A bank wants to predict whether a customer will default on a loan.
+
+Business Goal:
+Reduce financial loss due to loan defaults.
+
+</div>
+
+<h2>5. Phase 2 : Data Collection</h2>
+
+<p>
+
+Relevant data is collected from different sources such as databases,
+websites, sensors, APIs, IoT devices, and cloud platforms.
+
+</p>
+
+<table>
+
+<tr>
+<th>Source</th>
+<th>Example</th>
+</tr>
+
+<tr>
+<td>Database</td>
+<td>Customer Records</td>
+</tr>
+
+<tr>
+<td>Social Media</td>
+<td>User Reviews</td>
+</tr>
+
+<tr>
+<td>Sensors</td>
+<td>Temperature Data</td>
+</tr>
+
+<tr>
+<td>Web APIs</td>
+<td>Weather Information</td>
+</tr>
+
+<tr>
+<td>IoT Devices</td>
+<td>Smart Watches</td>
+</tr>
+
+</table>
+
+<h2>6. Phase 3 : Data Preparation</h2>
+
+<p>
+
+Raw data is usually incomplete and inconsistent.
+Data preparation improves data quality before analysis.
+
+</p>
+
+<h3>Data Preparation Activities</h3>
+
+<ul>
+
+<li>Data Cleaning</li>
+
+<li>Handling Missing Values</li>
+
+<li>Removing Duplicates</li>
+
+<li>Data Transformation</li>
+
+<li>Data Integration</li>
+
+<li>Feature Engineering</li>
+
+</ul>
+
+<div class="note">
+
+It is estimated that nearly <b>70–80% of the total project time</b> is spent
+on data preparation.
+
+</div>
+
+<h2>7. Phase 4 : Exploratory Data Analysis (EDA)</h2>
+
+<p>
+
+EDA helps understand data characteristics using statistical methods
+and visualization.
+
+</p>
+
+<table>
+
+<tr>
+<th>Technique</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>Histogram</td>
+<td>Distribution Analysis</td>
+</tr>
+
+<tr>
+<td>Box Plot</td>
+<td>Outlier Detection</td>
+</tr>
+
+<tr>
+<td>Scatter Plot</td>
+<td>Relationship Analysis</td>
+</tr>
+
+<tr>
+<td>Correlation Matrix</td>
+<td>Feature Relationships</td>
+</tr>
+
+</table>
+
+<h2>8. Phase 5 : Model Building</h2>
+
+<p>
+
+Machine Learning algorithms are selected according to the problem type.
+
+</p>
+
+<table>
+
+<tr>
+<th>Problem</th>
+<th>Algorithm</th>
+</tr>
+
+<tr>
+<td>Classification</td>
+<td>Decision Tree, Random Forest</td>
+</tr>
+
+<tr>
+<td>Regression</td>
+<td>Linear Regression</td>
+</tr>
+
+<tr>
+<td>Clustering</td>
+<td>K-Means</td>
+</tr>
+
+<tr>
+<td>Recommendation</td>
+<td>Collaborative Filtering</td>
+</tr>
+
+</table>
+
+<h2>9. Phase 6 : Model Evaluation</h2>
+
+<p>
+
+The developed model is tested using evaluation metrics.
+
+</p>
+
+<table>
+
+<tr>
+<th>Task</th>
+<th>Evaluation Metric</th>
+</tr>
+
+<tr>
+<td>Classification</td>
+<td>Accuracy, Precision, Recall, F1-Score</td>
+</tr>
+
+<tr>
+<td>Regression</td>
+<td>MAE, RMSE, R² Score</td>
+</tr>
+
+<tr>
+<td>Clustering</td>
+<td>Silhouette Score</td>
+</tr>
+
+</table>
+
+<div class="example">
+
+Example:
+
+If a disease prediction model correctly predicts 980 out of 1000 cases,
+its accuracy is:
+
+Accuracy = 98%
+
+</div>
+
+<h2>10. Phase 7 : Deployment</h2>
+
+<p>
+
+The trained model is deployed into a real-world environment where users
+can access it through websites, mobile applications, or cloud services.
+
+</p>
+
+<ul>
+
+<li>Hospital Diagnosis System</li>
+
+<li>Bank Fraud Detection</li>
+
+<li>E-Commerce Recommendation System</li>
+
+<li>Chatbots</li>
+
+</ul>
+
+<h2>11. Phase 8 : Monitoring and Maintenance</h2>
+
+<p>
+
+A deployed model must be continuously monitored because data changes over time.
+
+</p>
+
+<h3>Monitoring Activities</h3>
+
+<ul>
+
+<li>Performance Monitoring</li>
+
+<li>Retraining Models</li>
+
+<li>Bug Fixing</li>
+
+<li>Security Updates</li>
+
+<li>Collecting User Feedback</li>
+
+</ul>
+
+<h2>12. Real-World Case Study</h2>
+
+<div class="example">
+
+<b>Problem:</b> Predict student placement.
+
+<table>
+
+<tr>
+<th>Life Cycle Phase</th>
+<th>Activity</th>
+</tr>
+
+<tr>
+<td>Business Understanding</td>
+<td>Improve placement success</td>
+</tr>
+
+<tr>
+<td>Data Collection</td>
+<td>Student academic records</td>
+</tr>
+
+<tr>
+<td>Data Preparation</td>
+<td>Remove missing values</td>
+</tr>
+
+<tr>
+<td>EDA</td>
+<td>Analyze CGPA and skills</td>
+</tr>
+
+<tr>
+<td>Model Building</td>
+<td>Random Forest Classifier</td>
+</tr>
+
+<tr>
+<td>Evaluation</td>
+<td>Accuracy = 94%</td>
+</tr>
+
+<tr>
+<td>Deployment</td>
+<td>Placement Prediction Portal</td>
+</tr>
+
+</table>
+
+</div>
+
+<h2>13. Advantages of Following the Life Cycle</h2>
+
+<ul>
+
+<li>Improves project quality.</li>
+
+<li>Better collaboration.</li>
+
+<li>Higher prediction accuracy.</li>
+
+<li>Reduces project cost.</li>
+
+<li>Supports continuous improvement.</li>
+
+<li>Easy maintenance.</li>
+
+</ul>
+
+<h2>14. Challenges</h2>
+
+<ul>
+
+<li>Poor data quality.</li>
+
+<li>Changing business requirements.</li>
+
+<li>Large data volume.</li>
+
+<li>Model overfitting.</li>
+
+<li>Deployment complexity.</li>
+
+<li>Ethical and privacy concerns.</li>
+
+</ul>
+
+<h2>15. Summary</h2>
+
+<ul>
+
+<li>The Data Science Project Life Cycle provides a structured approach for solving data-driven problems.</li>
+
+<li>It includes Business Understanding, Data Collection, Data Preparation, EDA, Model Building, Evaluation, Deployment, and Monitoring.</li>
+
+<li>Each phase contributes to building accurate, reliable, and scalable Data Science solutions.</li>
+
+</ul>
+
+<h2>Interview Questions</h2>
+
+<ol>
+
+<li>What is the Data Science Project Life Cycle?</li>
+
+<li>Explain each phase of the life cycle.</li>
+
+<li>Why is Business Understanding important?</li>
+
+<li>What is Exploratory Data Analysis (EDA)?</li>
+
+<li>Differentiate between Model Building and Model Evaluation.</li>
+
+<li>Why is model monitoring necessary after deployment?</li>
+
+<li>What challenges are faced during Data Science projects?</li>
+
+</ol>
+
+<h2>Multiple Choice Questions (MCQs)</h2>
+
+<ol>
+
+<li>The first phase of a Data Science project is:<br>
+a) Data Collection<br>
+b) Model Building<br>
+c) Business Understanding ✔<br>
+d) Deployment
+</li>
+
+<br>
+
+<li>Which phase consumes the maximum project time?<br>
+a) Model Evaluation<br>
+b) Data Preparation ✔<br>
+c) Deployment<br>
+d) Business Understanding
+</li>
+
+<br>
+
+<li>EDA stands for:<br>
+a) Efficient Data Analysis<br>
+b) Exploratory Data Analysis ✔<br>
+c) External Data Analysis<br>
+d) Enterprise Data Analytics
+</li>
+
+<br>
+
+<li>Which phase involves deploying the trained model to users?<br>
+a) Monitoring<br>
+b) Deployment ✔<br>
+c) EDA<br>
+d) Data Collection
+</li>
+
+<br>
+
+<li>Which metric is commonly used for classification models?<br>
+a) Accuracy ✔<br>
+b) Voltage<br>
+c) Frequency<br>
+d) Bandwidth
+</li>
+
+</ol>
+
+<h2>Assignment</h2>
+
+<ol>
+
+<li>Define the Data Science Project Life Cycle.</li>
+
+<li>Draw and explain the phases of the Data Science Project Life Cycle.</li>
+
+<li>Explain the importance of Data Preparation.</li>
+
+<li>Write short notes on EDA and Model Evaluation.</li>
+
+<li>Describe a real-world application of the Data Science Project Life Cycle.</li>
+
+</ol>
+
+<div class="footer">
+
+<hr>
+
+<b>End of Lecture – 5</b><br>
+
+<b>Next Lecture: OSEMN Framework</b>
+
+</div>
+
+</div>
+
+</body>
+</html>
