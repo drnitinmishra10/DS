@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Problem Statement: E-commerce Customer Churn</title>
+    <style>
+        .problem-statement-container {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            color: #2d3748;
+            line-height: 1.6;
+        }
+        .header-section {
+            border-bottom: 2px solid #3182ce;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .project-title {
+            color: #1a365d;
+            font-size: 1.8rem;
+            margin: 0 0 8px 0;
+            font-weight: 700;
+        }
+        .project-meta {
+            color: #718096;
+            font-size: 0.95rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        h3 {
+            color: #2b6cb0;
+            font-size: 1.25rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .highlight-box {
+            background-color: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            font-style: italic;
+            color: #2c5282;
+        }
+        ul {
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .metrics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .metrics-table th, .metrics-table td {
+            border: 1px solid #e2e8f0;
+            padding: 10px 12px;
+            text-align: left;
+        }
+        .metrics-table th {
+            background-color: #f7fafc;
+            color: #4a5568;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<div class="problem-statement-container">
+    <div class="header-section">
+        <h1 class="project-title">Predictive Customer Churn Mitigation Platform</h1>
+        <p class="project-meta">Data Science Project Specification | Framework: OSEMN</p>
+    </div>
+
+    <h3>1. Context & Business Background</h3>
+    <p>
+        In the highly competitive e-commerce sector, the cost of acquiring a new customer is significantly higher than retaining an existing one. For sustainable revenue growth, keeping users actively engaged with the platform is critical. Our current customer transaction logs indicate a gradual decline in repeat purchase rates over the last three quarters, signaling a growing retention issue.
+    </p>
+
+    <h3>2. The Problem Statement</h3>
+    <div class="highlight-box">
+        <p>
+            "The marketing and operations teams are currently unable to identify 'at-risk' customers before they completely abandon the platform. Due to this lack of proactive insight, retention interventions are deployed uniformly across the entire user base, leading to inefficient budget utilization, low promotion conversion rates, and an unmitigated rise in customer churn."
+        </p>
+    </div>
+
+    <h3>3. Objectives & Scope</h3>
+    <p>
+        The primary goal of this data science initiative is to build an end-to-end predictive pipeline that flags potential churn candidates based on historical transactional, web analytics, and support data. 
+    </p>
+    <ul>
+        <li><strong>Predictive Accuracy:</strong> Develop a classification model to identify users with a high probability (>70%) of churning within the next 30 days.</li>
+        <li><strong>Key Driver Analysis:</strong> Isolate the primary behavioral and operational triggers (e.g., delivery delays, drop in app login frequency) causing customer attrition.</li>
+        <li><strong>Targeted Interventions:</strong> Enable the marketing team to transition from mass-email blasts to automated, high-precision incentive triggers tailored to risk tiers.</li>
+    </ul>
+
+    <h3>4. Success Metrics</h3>
+    <p>The performance and business impact of the deployed solution will be evaluated using the following benchmarks:</p>
+    
+    <table class="metrics-table">
+        <thead>
+            <tr>
+                <th>Metric Category</th>
+                <th>Measurement Standard</th>
+                <th>Target Improvement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Data Science Metric</strong></td>
+                <td>Model Recall & ROC-AUC Score</td>
+                <td>Recall &ge; 80% (minimizing missed at-risk users)</td>
+            </tr>
+            <tr>
+                <td><strong>Business Metric</strong></td>
+                <td>Overall Monthly Churn Rate</td>
+                <td>Reduction in customer attrition by 12% within 6 months</td>
+            </tr>
+            <tr>
+                <td><strong>Financial Metric</strong></td>
+                <td>Marketing ROI / Retention Budget Efficiency</td>
+                <td>20% reduction in promotional spend via targeted distribution</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
