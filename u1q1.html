@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Quiz: OSEMN Framework</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 {
+            text-align: center;
+            color: #1a365d;
+            margin-bottom: 5px;
+        }
+        h2 {
+            text-align: center;
+            color: #4a5568;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        .question-card {
+            background: #f8fafc;
+            border-left: 4px solid #3182ce;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .options {
+            display: flex;
+            gap: 15px;
+        }
+        label {
+            background: #fff;
+            border: 1px solid #cbd5e0;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        input[type="radio"]:checked + label {
+            background-color: #3182ce;
+            color: white;
+            border-color: #3182ce;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: 500;
+            display: none;
+        }
+        .correct { color: #2f855a; }
+        .incorrect { color: #c53030; }
+        .action-btn {
+            display: block;
+            width: 100%;
+            background: #2b6cb0;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: background 0.2s;
+        }
+        .action-btn:hover { background: #2c5282; }
+        #score-display {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #2b6cb0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Data Science - Unit 1 | Lecture 6</h1>
+    <h2>Topic: OSEMN Framework & Admission-to-Placement Optimization</h2>
+    <hr style="border: 0; border-top: 1px solid #e2e8f0; margin-bottom: 25px;">
+
+    <form id="quizForm">
+        <div id="questions-container"></div>
+        
+        <button type="button" class="action-btn" onclick="checkQuiz()">Submit & Check Answers</button>
+    </form>
+
+    <div id="score-display"></div>
+</div>
+
+<script>
+    const quizData = [
+        { q: "The OSEMN framework was introduced by Hilary Mason and Chris Wiggins.", a: "true" },
+        { q: "The letter 'S' in OSEMN stands for 'Sorting' the data.", a: "false" },
+        { q: "Data scrubbing typically consumes a minimal amount (less than 10%) of a data scientist's time.", a: "false" },
+        { q: "Exploratory Data Analysis (EDA) belongs to the 'Explore' phase of the OSEMN framework.", a: "true" },
+        { q: "In the context of the student placement problem, querying historical university records represents the 'Obtain' phase.", a: "true" },
+        { q: "Removing data of students who actively opted out of placements to join family businesses happens during the 'Scrub' phase.", a: "true" },
+        { q: "The primary goal of the 'Model' phase is to translate data insights into business storytelling for non-technical stakeholders.", a: "false" },
+        { q: "Calculating summary statistics like mean and median of student CGPAs is a key activity of the 'Explore' phase.", a: "true" },
+        { q: "Feature engineering and hyperparameter tuning are core components of the 'Model' phase.", a: "true" },
+        { q: "The OSEMN framework is strictly linear and does not allow returning to previous stages once a stage is passed.", a: "false" },
+        { q: "Evaluating model performance metrics like Accuracy, Precision, and Recall is part of the 'Interpret' phase.", a: "true" },
+        { q: "Handling missing student grades via imputation is part of the 'Scrub' phase.", a: "true" },
+        { q: "Building a Logistic Regression model to classify students into risk zones belongs to the 'Explore' phase.", a: "false" },
+        { q: "The 'Obtain' phase only deals with structured internal databases and excludes scraping or using APIs.", a: "false" },
+        { q: "Identifying a strong correlation between student attendance and placement success is a direct outcome of EDA.", a: "true" },
+        { q: "Updating the university syllabus based on predictive insights is an action tied to the 'Interpret' phase.", a: "true" },
+        { q: "In the OSEMN workflow, 'Interpret' must always come before 'Model'.", a: "false" },
+        { q: "The OSEMN acronym contains letters in the exact order of execution: Obtain, Scrub, Explore, Model, iNterpret.", a: "true" },
+        { q: "An Early Warning System to flag unplaced candidates works best if deployed during the 'Obtain' phase.", a: "false" },
+        { q: "The OSEMN framework balances technical execution with commercial/institutional interpretation.", a: "true" }
+    ];
+
+    function loadQuiz() {
+        const container = document.getElementById('questions-container');
+        quizData.forEach((item, index) => {
+            const qNum = index + 1;
+            const card = document.createElement('div');
+            card.className = 'question-card';
+            card.innerHTML = `
+                <div class="question-text">${qNum}. ${item.q}</div>
+                <div class="options">
+                    <input type="radio" id="q${index}_t" name="q${index}" value="true">
+                    <label for="q${index}_t">True</label>
+                    <input type="radio" id="q${index}_f" name="q${index}" value="false">
+                    <label for="q${index}_f">False</label>
+                </div>
+                <div class="feedback" id="fb${index}"></div>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    function checkQuiz() {
+        let score = 0;
+        quizData.forEach((item, index) => {
+            const selected = document.querySelector(`input[name="q${index}"]:checked`);
+            const feedbackDiv = document.getElementById(`fb${index}`);
+            feedbackDiv.style.display = 'block';
+
+            if (selected) {
+                if (selected.value === item.a) {
+                    score++;
+                    feedbackDiv.innerHTML = "&#10004; Correct!";
+                    feedbackDiv.className = "feedback correct";
+                } else {
+                    feedbackDiv.innerHTML = `&#10008; Incorrect. The correct answer is ${item.a.toUpperCase()}.`;
+                    feedbackDiv.className = "feedback incorrect";
+                }
+            } else {
+                feedbackDiv.innerHTML = `&#10008; Unanswered. The correct answer is ${item.a.toUpperCase()}.`;
+                feedbackDiv.className = "feedback incorrect";
+            }
+        });
+
+        const scoreDisplay = document.getElementById('score-display');
+        scoreDisplay.style.display = 'block';
+        scoreDisplay.innerHTML = `Your Score: ${score} / ${quizData.length} (${(score/quizData.length * 100).toFixed(0)}%)`;
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    window.onload = loadQuiz;
+</script>
+
+</body>
+</html>
