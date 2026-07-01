@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Science Lab Experiment-2: Introduction to Kaggle and Basic Data Handling</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:40px;
+    line-height:1.7;
+    background:#f8f9fa;
+    color:#222;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:35px;
+    box-shadow:0 0 12px rgba(0,0,0,0.15);
+}
+h1,h2,h3{
+    color:#0B5394;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+table,th,td{
+    border:1px solid #444;
+}
+th,td{
+    padding:10px;
+}
+th{
+    background:#0B5394;
+    color:white;
+}
+code{
+    background:#eeeeee;
+    padding:2px 5px;
+    border-radius:4px;
+}
+pre{
+    background:#f4f4f4;
+    padding:15px;
+    border-left:5px solid #0B5394;
+    overflow:auto;
+}
+.objective{
+    background:#e8f4ff;
+    padding:15px;
+    border-left:6px solid #0B5394;
+}
+.footer{
+    text-align:center;
+    margin-top:40px;
+    font-weight:bold;
+    color:#0B5394;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 align="center">Department of Computer Science & Engineering</h1>
+<h2 align="center">Data Science Laboratory</h2>
+<h2 align="center">Lab Experiment – 2</h2>
+
+<h3 align="center">
+Introduction to Kaggle Platform and Basic Data Handling
+</h3>
+
+<hr>
+
+<p><strong>Prepared By:</strong> <strong>Dr. Nitin Mishra</strong><br>
+Professor, Department of Computer Science & Engineering</p>
+
+<h2>Experiment Aim</h2>
+
+<div class="objective">
+To familiarize students with the Kaggle platform, upload datasets, perform basic Pandas operations, and read different types of datasets using Python in Kaggle Notebook.
+</div>
+
+<h2>Learning Outcomes</h2>
+
+After completing this experiment, students will be able to:
+
+<ul>
+<li>Create and access a Kaggle account.</li>
+<li>Create a Kaggle Notebook.</li>
+<li>Add datasets to a Kaggle notebook.</li>
+<li>Import the Pandas library.</li>
+<li>Load and explore datasets.</li>
+<li>Read CSV, Excel, JSON and Text files using Pandas.</li>
+<li>Perform basic data inspection operations.</li>
+</ul>
+
+<h2>Software Requirements</h2>
+
+<ul>
+<li>Google Account</li>
+<li>Kaggle Account</li>
+<li>Internet Connection</li>
+<li>Web Browser</li>
+</ul>
+
+<h2>Theory</h2>
+
+<p>
+Kaggle is one of the world's largest platforms for Data Science, Machine Learning, and Artificial Intelligence.
+It provides free cloud-based Jupyter notebooks, GPU support, datasets, competitions, and collaborative projects.
+Students can perform data analysis without installing Python on their local computers.
+</p>
+
+<hr>
+
+<h2>Lab Tasks</h2>
+
+<h3>Task 1: Login to Kaggle using Google ID</h3>
+
+<ol>
+<li>Open https://www.kaggle.com</li>
+<li>Click <strong>Sign In</strong>.</li>
+<li>Select <strong>Continue with Google</strong>.</li>
+<li>Complete profile setup.</li>
+<li>Create a new Notebook.</li>
+</ol>
+
+<hr>
+
+<h3>Task 2: Add Dataset to Kaggle Notebook</h3>
+
+<ol>
+<li>Create a new notebook.</li>
+<li>Click <strong>Add Data</strong>.</li>
+<li>Search any public dataset (Titanic, Iris, House Prices etc.).</li>
+<li>Add the dataset.</li>
+<li>Verify that the dataset appears under the Input folder.</li>
+</ol>
+
+<hr>
+
+<h3>Task 3: Basic Pandas Code in Kaggle</h3>
+
+<pre>
+import pandas as pd
+
+df = pd.read_csv('/kaggle/input/your-dataset/data.csv')
+
+print(df.head())
+
+print(df.tail())
+
+print(df.shape)
+
+print(df.columns)
+
+print(df.info())
+
+print(df.describe())
+</pre>
+
+<hr>
+
+<h3>Task 4: Reading Different Types of Files</h3>
+
+<h4>1. Reading CSV File</h4>
+
+<pre>
+import pandas as pd
+
+df = pd.read_csv("sample.csv")
+print(df.head())
+</pre>
+
+<h4>2. Reading Excel File</h4>
+
+<pre>
+df = pd.read_excel("sample.xlsx")
+print(df.head())
+</pre>
+
+<h4>3. Reading JSON File</h4>
+
+<pre>
+df = pd.read_json("sample.json")
+print(df.head())
+</pre>
+
+<h4>4. Reading Text File</h4>
+
+<pre>
+df = pd.read_csv("sample.txt", delimiter="\t")
+print(df.head())
+</pre>
+
+<hr>
+
+<h2>Basic Pandas Commands</h2>
+
+<table>
+
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>head()</td>
+<td>Display first five rows</td>
+</tr>
+
+<tr>
+<td>tail()</td>
+<td>Display last five rows</td>
+</tr>
+
+<tr>
+<td>shape</td>
+<td>Returns rows and columns</td>
+</tr>
+
+<tr>
+<td>columns</td>
+<td>Shows column names</td>
+</tr>
+
+<tr>
+<td>info()</td>
+<td>Dataset information</td>
+</tr>
+
+<tr>
+<td>describe()</td>
+<td>Statistical summary</td>
+</tr>
+
+<tr>
+<td>isnull().sum()</td>
+<td>Count missing values</td>
+</tr>
+
+<tr>
+<td>value_counts()</td>
+<td>Frequency of values</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Observation</h2>
+
+<ul>
+<li>Kaggle Notebook created successfully.</li>
+<li>Dataset added successfully.</li>
+<li>Pandas imported successfully.</li>
+<li>Dataset loaded correctly.</li>
+<li>Different file formats were successfully read.</li>
+</ul>
+
+<hr>
+
+<h2>Result</h2>
+
+<p>
+The experiment was successfully completed. Students learned how to access Kaggle, add datasets,
+use Pandas for basic data analysis, and read multiple file formats using Python.
+</p>
+
+<hr>
+
+<h2>Viva Questions</h2>
+
+<ol>
+<li>What is Kaggle?</li>
+<li>Why is Kaggle popular among Data Scientists?</li>
+<li>What is Pandas?</li>
+<li>What is a DataFrame?</li>
+<li>What is the difference between Series and DataFrame?</li>
+<li>How do you read a CSV file in Pandas?</li>
+<li>How do you display the first five rows?</li>
+<li>What does <code>shape</code> return?</li>
+<li>How do you check missing values?</li>
+<li>Can Pandas read Excel files?</li>
+</ol>
+
+<hr>
+
+<h2>Assignment</h2>
+
+<ol>
+<li>Create a Kaggle account.</li>
+<li>Download the Iris dataset.</li>
+<li>Upload it to Kaggle.</li>
+<li>Read the dataset using Pandas.</li>
+<li>Display the first 10 rows.</li>
+<li>Display dataset information.</li>
+<li>Find missing values.</li>
+<li>Save the notebook and submit the Kaggle Notebook link.</li>
+</ol>
+
+<div class="footer">
+Prepared By<br>
+<b>Dr. Nitin Mishra</b><br>
+Professor<br>
+Department of Computer Science & Engineering
+</div>
+
+</div>
+
+</body>
+</html>
