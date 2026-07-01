@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Science Lab Experiment-3: Data Manipulation Using Pandas</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:40px;
+    background:#f5f7fa;
+    color:#222;
+    line-height:1.7;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#ffffff;
+    padding:35px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+h1,h2,h3{
+    color:#0B5394;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+table,th,td{
+    border:1px solid #444;
+}
+th{
+    background:#0B5394;
+    color:#ffffff;
+}
+th,td{
+    padding:10px;
+}
+pre{
+    background:#f4f4f4;
+    padding:15px;
+    border-left:5px solid #0B5394;
+    overflow:auto;
+}
+.objective{
+    background:#e8f4ff;
+    padding:15px;
+    border-left:6px solid #0B5394;
+}
+.footer{
+    text-align:center;
+    margin-top:40px;
+    color:#0B5394;
+    font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 align="center">Department of Computer Science & Engineering</h1>
+
+<h2 align="center">Data Science Laboratory</h2>
+
+<h2 align="center">Lab Experiment – 3</h2>
+
+<h3 align="center">Data Manipulation Operations Using Pandas</h3>
+
+<hr>
+
+<p>
+<strong>Prepared By:</strong><br>
+<strong>Dr. Nitin Mishra</strong><br>
+Professor, Department of Computer Science & Engineering
+</p>
+
+<h2>Aim</h2>
+
+<div class="objective">
+To perform basic data manipulation operations using the Pandas library, including loading datasets, selecting data, filtering records, modifying datasets, and handling missing values.
+</div>
+
+<h2>Learning Outcomes</h2>
+
+After completing this experiment, students will be able to:
+
+<ul>
+<li>Load datasets using Pandas.</li>
+<li>Explore DataFrames.</li>
+<li>Select rows and columns.</li>
+<li>Filter data using conditions.</li>
+<li>Add, modify and delete columns.</li>
+<li>Handle missing values.</li>
+<li>Sort datasets.</li>
+</ul>
+
+<hr>
+
+<h2>Software Requirements</h2>
+
+<ul>
+<li>Python 3.x</li>
+<li>Pandas Library</li>
+<li>Kaggle Notebook / Google Colab / Jupyter Notebook</li>
+<li>CSV Dataset (Titanic/Iris/Employee Dataset)</li>
+</ul>
+
+<hr>
+
+<h2>Theory</h2>
+
+<p>
+Data manipulation is the process of organizing, transforming, filtering, and modifying data before analysis. Pandas is one of the most powerful Python libraries that provides flexible data structures such as Series and DataFrame to efficiently perform these operations. Data manipulation improves data quality and prepares datasets for machine learning and visualization.
+</p>
+
+<hr>
+
+<h2>Lab Tasks</h2>
+
+<h3>Task 1: Load and Explore Dataset</h3>
+
+<p>Import the Pandas library and load a CSV dataset. Display the first few records and basic information about the dataset.</p>
+
+<pre>
+import pandas as pd
+
+df = pd.read_csv("employee.csv")
+
+print(df.head())
+print(df.tail())
+print(df.shape)
+print(df.columns)
+print(df.info())
+print(df.describe())
+</pre>
+
+<hr>
+
+<h3>Task 2: Select and Filter Data</h3>
+
+<p>Select specific rows and columns and filter records based on conditions.</p>
+
+<pre>
+# Selecting Columns
+print(df["Name"])
+print(df[["Name","Salary"]])
+
+# Selecting Rows
+print(df.loc[0:4])
+
+# Filtering Data
+print(df[df["Salary"] > 50000])
+
+print(df[(df["Age"] > 30) &
+         (df["Department"] == "IT")])
+</pre>
+
+<hr>
+
+<h3>Task 3: Modify Dataset</h3>
+
+<p>Add new columns, modify existing values, rename columns, and delete unnecessary columns.</p>
+
+<pre>
+# Add Column
+df["Bonus"] = df["Salary"] * 0.10
+
+# Modify Column
+df["Salary"] = df["Salary"] + 5000
+
+# Rename Column
+df.rename(columns={"Salary":"MonthlySalary"},
+          inplace=True)
+
+# Delete Column
+df.drop("Bonus", axis=1, inplace=True)
+
+print(df.head())
+</pre>
+
+<hr>
+
+<h3>Task 4: Handle Missing Values and Sort Data</h3>
+
+<p>Identify missing values, replace or remove them, remove duplicate records, and sort the dataset.</p>
+
+<pre>
+# Missing Values
+print(df.isnull().sum())
+
+df.fillna(0, inplace=True)
+
+# Remove Duplicates
+df.drop_duplicates(inplace=True)
+
+# Sort Data
+df.sort_values(by="Age", inplace=True)
+
+print(df.head())
+</pre>
+
+<hr>
+
+<h2>Common Pandas Functions Used</h2>
+
+<table>
+
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>read_csv()</td>
+<td>Loads CSV dataset</td>
+</tr>
+
+<tr>
+<td>head()</td>
+<td>Displays first five rows</td>
+</tr>
+
+<tr>
+<td>tail()</td>
+<td>Displays last five rows</td>
+</tr>
+
+<tr>
+<td>shape</td>
+<td>Returns number of rows and columns</td>
+</tr>
+
+<tr>
+<td>info()</td>
+<td>Displays dataset information</td>
+</tr>
+
+<tr>
+<td>describe()</td>
+<td>Shows statistical summary</td>
+</tr>
+
+<tr>
+<td>loc[]</td>
+<td>Select rows and columns using labels</td>
+</tr>
+
+<tr>
+<td>drop()</td>
+<td>Deletes rows or columns</td>
+</tr>
+
+<tr>
+<td>rename()</td>
+<td>Renames columns</td>
+</tr>
+
+<tr>
+<td>fillna()</td>
+<td>Replaces missing values</td>
+</tr>
+
+<tr>
+<td>drop_duplicates()</td>
+<td>Removes duplicate records</td>
+</tr>
+
+<tr>
+<td>sort_values()</td>
+<td>Sorts the dataset</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Observation</h2>
+
+<ul>
+<li>Dataset was successfully loaded.</li>
+<li>Rows and columns were selected using Pandas.</li>
+<li>Data was filtered using logical conditions.</li>
+<li>Columns were added, modified, renamed, and deleted.</li>
+<li>Missing values and duplicate records were handled successfully.</li>
+<li>The dataset was sorted based on selected attributes.</li>
+</ul>
+
+<hr>
+
+<h2>Result</h2>
+
+<p>
+The experiment was successfully completed. Students learned how to manipulate datasets using the Pandas library by performing selection, filtering, modification, sorting, and missing value handling operations.
+</p>
+
+<hr>
+
+<h2>Viva Questions</h2>
+
+<ol>
+<li>What is data manipulation?</li>
+<li>What is a DataFrame?</li>
+<li>What is the difference between loc[] and iloc[]?</li>
+<li>How do you filter records in Pandas?</li>
+<li>How do you add a new column?</li>
+<li>How do you rename a column?</li>
+<li>What is the purpose of drop()?</li>
+<li>How do you identify missing values?</li>
+<li>What is the use of fillna()?</li>
+<li>How do you sort a dataset?</li>
+</ol>
+
+<hr>
+
+<h2>Assignment</h2>
+
+<ol>
+<li>Download the Titanic dataset from Kaggle.</li>
+<li>Load the dataset using Pandas.</li>
+<li>Display the first ten records.</li>
+<li>Filter passengers whose age is greater than 30 years.</li>
+<li>Add a new column named <strong>AgeGroup</strong>.</li>
+<li>Rename one existing column.</li>
+<li>Remove duplicate records.</li>
+<li>Replace missing values with appropriate values.</li>
+<li>Sort the dataset by Age.</li>
+<li>Save the modified dataset as a new CSV file.</li>
+</ol>
+
+<div class="footer">
+
+Prepared By<br>
+
+<strong>Dr. Nitin Mishra</strong><br>
+
+Professor<br>
+
+Department of Computer Science & Engineering
+
+</div>
+
+</div>
+
+</body>
+</html>
