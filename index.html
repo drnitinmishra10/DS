@@ -2,298 +2,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science Systems Lab & Resources Index</title>
-    <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-    background:#eef5fb;
-    color:#2d3748;
-    line-height:1.8;
-}
-
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:35px auto;
-    background:#ffffff;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 10px 35px rgba(0,0,0,.15);
-}
-
-/* Header Banner */
-
-.header{
-    position:relative;
-}
-
-.header img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-}
-
-.overlay{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(5,35,75,.65);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    text-align:center;
-}
-
-.overlay h1{
-    font-size:38px;
-    letter-spacing:1px;
-}
-
-.overlay h2{
-    color:#7ef9ff;
-    margin-top:10px;
-}
-
-.content{
-    padding:35px;
-}
-
-h2{
-    color:#004d7a;
-    border-left:6px solid #00bcd4;
-    padding-left:12px;
-    margin-top:30px;
-    margin-bottom:15px;
-}
-
-h3{
-    color:#00796b;
-    margin-top:25px;
-}
-
-.objective{
-    background:#e3f2fd;
-    border-left:6px solid #0288d1;
-    padding:18px;
-    border-radius:6px;
-}
-
-hr{
-    border:none;
-    border-top:2px solid #d7e3f4;
-    margin:30px 0;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:15px;
-}
-
-table th{
-    background:#00695c;
-    color:white;
-}
-
-table th,
-table td{
-    border:1px solid #ccc;
-    padding:12px;
-}
-
-table tr:nth-child(even){
-    background:#f7fbfc;
-}
-
-pre{
-    background:#0f172a;
-    color:#e2e8f0;
-    padding:18px;
-    border-left:6px solid #00bcd4;
-    border-radius:6px;
-    overflow:auto;
-}
-
-ul,ol{
-    margin-left:25px;
-}
-
-.footer{
-    margin-top:40px;
-    text-align:center;
-    background:#004d7a;
-    color:white;
-    padding:25px;
-    font-size:18px;
-}
-
-strong{
-    color:#005b96;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Science Repository Index | Dr. Nitin Mishra</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:linear-gradient(135deg,#081b29,#0b3d5d,#0f2027);background-size:400% 400%;animation:bg 15s ease infinite;color:#f5f5f5}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.hero{height:420px;display:flex;justify-content:center;align-items:center;text-align:center;background:linear-gradient(rgba(3,15,40,.75),rgba(0,102,153,.75)),url("https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&q=80");background-size:cover}
+.glass{background:rgba(255,255,255,.08);backdrop-filter:blur(12px);padding:50px;border-radius:24px;width:min(90%,980px);border:1px solid rgba(255,255,255,.15)}
+h1{font-size:54px} p{font-size:20px;margin:18px 0 28px}
+.container{max-width:1300px;width:92%;margin:40px auto}
+.controls{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+#search{flex:1;padding:16px 22px;border-radius:999px;border:none;font-size:17px}
+#count{padding:16px 22px;background:#00BCD4;border-radius:999px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.card{background:rgba(255,255,255,.08);padding:24px;border-radius:18px;border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;justify-content:space-between}
+.card:hover{transform:translateY(-6px);transition:.25s}
+.card-title{font-size:20px;font-weight:600;margin-bottom:8px}
+.card-meta{font-size:14px;color:#d0d0d0;word-break:break-word;margin-bottom:18px}
+.card-btn{display:block;text-align:center;text-decoration:none;color:#fff;background:linear-gradient(135deg,#00BCD4,#0066FF);padding:12px;border-radius:999px}
+.loading,.error{text-align:center;padding:40px;background:rgba(255,255,255,.08);border-radius:18px}
+footer{text-align:center;padding:30px;background:#041421;margin-top:50px}
 </style>
 </head>
 <body>
+<header class="hero">
+<div class="glass">
+<h1>🧠 Data Science Repository</h1>
+<p>Explore Data Science Labs, Notes, Assignments, Python Programs, Machine Learning Experiments, Datasets & Educational Resources.</p>
+<h3>Prepared & Maintained by Dr. Nitin Mishra</h3>
+</div>
+</header>
 
-    <header class="hero-banner">
-        <h1>Data Science Repository Index</h1>
-        <p>A collection of core operational algorithms, lab exercises, and system paradigms.</p>
-        <div class="professor-badge">Mentor: Dr. Nitin Mishra</div>
-    </header>
+<main class="container">
+<div class="controls">
+<input id="search" type="text" placeholder="🔍 Search by title, topic or filename...">
+<div id="count">Loading...</div>
+</div>
+<div id="index-grid" class="grid">
+<div class="loading">Scanning repository...</div>
+</div>
+</main>
 
-    <main class="container">
-        <div class="controls">
-            <input type="text" id="search" class="search-bar" placeholder="Search files by title or name...">
-            <div id="count" class="file-count">Loading files...</div>
-        </div>
+<footer>© 2026 Data Science Repository | Designed by Dr. Nitin Mishra</footer>
 
-        <div id="index-grid" class="grid">
-            <div class="loading">Scanning repository structures...</div>
-        </div>
-    </main>
+<script>
+const REPO_OWNER='drnitinmishra10';
+const REPO_NAME='DS';
+const API_URL=`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/git/trees/main?recursive=1`;
 
-    <footer>
-        &copy; 2026 Repository Indexing Engine | Designed for data Science Educational Resource Management
-    </footer>
+const gridEl=document.getElementById('index-grid');
+const searchEl=document.getElementById('search');
+const countEl=document.getElementById('count');
+let allFiles=[];
 
-    <script>
-        // Target repository configuration
-        const REPO_OWNER = 'drnitinmishra10';
-        const REPO_NAME = 'DS';
-        const API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/git/trees/main?recursive=1`;
-
-        const gridEl = document.getElementById('index-grid');
-        const searchEl = document.getElementById('search');
-        const countEl = document.getElementById('count');
-
-        let allFiles = [];
-
-        // Helper to cleanly extract HTML titles via temporary parsing
-        function extractTitle(htmlText, fallbackName) {
-    try {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(htmlText, "text/html");
-
-        // Read the HTML <title> tag
-        const title = doc.title.trim();
-
-        return title.length ? title : fallbackName;
-    } catch (e) {
-        console.error("Unable to extract title:", e);
-        return fallbackName;
-    }
+function extractTitle(html,fallback){
+  try{
+    const doc=new DOMParser().parseFromString(html,'text/html');
+    return (doc.title||'').trim()||fallback;
+  }catch(e){return fallback;}
 }
 
-        // Fetch repository tree and process files asynchronously
-        async function loadRepositoryIndex() {
-            try {
-                const response = await fetch(API_URL);
-                if (!response.ok) throw new Error('Network visibility constraints encountered.');
-                
-                const data = await response.json();
-                
-                // Isolate HTML files excluding index.html itself to prevent recursion loop
-                const htmlFiles = data.tree.filter(file => 
-                    file.path.endsWith('.html') && 
-                    file.path.toLowerCase() !== 'index.html' &&
-                    file.type === 'blob'
-                );
+function icon(path){
+  const p=path.toLowerCase();
+  if(p.includes('lab')) return '🧪';
+  if(p.includes('note')) return '📘';
+  if(p.includes('assignment')) return '📝';
+  if(p.includes('python')) return '🐍';
+  return '📄';
+}
 
-                if (htmlFiles.length === 0) {
-                    gridEl.innerHTML = '<div class="error">No supplemental HTML resource documents detected in this tree branch.</div>';
-                    countEl.textContent = '0 files found';
-                    return;
-                }
-
-                // Resolve references and fetch underlying file contents concurrently to pull title attributes
-                const processPromises = htmlFiles.map(async (file) => {
-
-    const rawUrl = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main/${file.path}`;
-
-    let title = file.path
-        .split("/")
-        .pop()
-        .replace(".html", "");
-
-    try {
-        const response = await fetch(rawUrl);
-
-        if (response.ok) {
-            const html = await response.text();
-
-            // Extract <title> from HTML
-            title = extractTitle(html, title);
-        }
-    } catch (error) {
-        console.error(`Error reading ${file.path}`, error);
-    }
-
-    return {
+async function loadRepositoryIndex(){
+  try{
+    const res=await fetch(API_URL);
+    if(!res.ok) throw new Error();
+    const data=await res.json();
+    const files=data.tree.filter(f=>f.type==='blob'&&f.path.endsWith('.html')&&f.path.toLowerCase()!=='index.html');
+    const processed=await Promise.all(files.map(async f=>{
+      let title=f.path.split('/').pop().replace('.html','');
+      try{
+        const raw=`https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main/${f.path}`;
+        const rr=await fetch(raw);
+        if(rr.ok) title=extractTitle(await rr.text(),title);
+      }catch(e){}
+      return{
         title,
-        path: file.path,
-        url: `https://${REPO_OWNER}.github.io/${REPO_NAME}/${file.path}`
-    };
+        path:f.path,
+        url:`https://${REPO_OWNER}.github.io/${REPO_NAME}/${f.path}`
+      };
+    }));
+    allFiles=processed.sort((a,b)=>a.title.localeCompare(b.title));
+    renderGrid(allFiles);
+  }catch(e){
+    gridEl.innerHTML='<div class="error">Unable to load repository.</div>';
+    countEl.textContent='Error';
+  }
+}
+
+function renderGrid(files){
+  countEl.textContent=`${files.length} Files`;
+  if(!files.length){
+    gridEl.innerHTML='<div class="error">No matching files found.</div>';
+    return;
+  }
+  gridEl.innerHTML=files.map(f=>`
+    <div class="card">
+      <div>
+        <div class="card-title">${icon(f.path)} ${f.title}</div>
+        <div class="card-meta">${f.path}</div>
+      </div>
+      <a class="card-btn" target="_blank" href="${f.url}">Open Resource</a>
+    </div>`).join('');
+}
+
+searchEl.addEventListener('input',()=>{
+ const q=searchEl.value.toLowerCase().trim();
+ renderGrid(allFiles.filter(f=>f.title.toLowerCase().includes(q)||f.path.toLowerCase().includes(q)));
 });
 
-                allFiles = await Promise.all(processPromises);
-                renderGrid(allFiles);
-
-            } catch (error) {
-                console.error(error);
-                gridEl.innerHTML = '<div class="error">Error querying the structural deployment layout. Verify GitHub Pages publishing options.</div>';
-                countEl.textContent = 'Error';
-            }
-        }
-
-        // Render card interfaces dynamically
-        function renderGrid(files) {
-            gridEl.innerHTML = '';
-            
-            if (files.length === 0) {
-                gridEl.innerHTML = '<div class="error">No matching index documents match your criteria.</div>';
-                countEl.textContent = '0 files matching';
-                return;
-            }
-
-            files.forEach(file => {
-                const card = document.createElement('div');
-                card.className = 'card';
-                card.innerHTML = `
-                    <div>
-                        <div class="card-title" title="${file.title}">${file.title}</div>
-                        <div class="card-meta">📁 ${file.path}</div>
-                    </div>
-                    <a href="${file.url}" class="card-btn" target="_blank">Execute/View Resource</a>
-                `;
-                gridEl.appendChild(card);
-            });
-
-            countEl.textContent = `Displaying ${files.length} structural file link(s)`;
-        }
-
-        // Live input query event filter
-        searchEl.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase().trim();
-            const filtered = allFiles.filter(f => 
-                f.title.toLowerCase().includes(query) || 
-                f.path.toLowerCase().includes(query)
-            );
-            renderGrid(filtered);
-        });
-
-        // Initialize execution sequence on page ready
-        document.addEventListener('DOMContentLoaded', loadRepositoryIndex);
-    </script>
+document.addEventListener('DOMContentLoaded',loadRepositoryIndex);
+</script>
 </body>
 </html>
